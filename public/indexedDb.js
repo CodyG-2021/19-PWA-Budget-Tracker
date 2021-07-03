@@ -15,7 +15,8 @@ request.onupgradeneeded = ({ target }) => {
 ​
 request.onsuccess = ({ target }) => {
   db = target.result;
-
+​
+  
   if (navigator.onLine) {
     checkDatabase();
   }
@@ -51,6 +52,7 @@ function checkDatabase() {
         return response.json();
       })
       .then(() => {
+        
         const transaction = db.transaction(["pending"], "readwrite");
         const store = transaction.objectStore("pending");
         store.clear();
@@ -58,4 +60,6 @@ function checkDatabase() {
     }
   };
 }
-​window.addEventListener("online", checkDatabase);
+​
+
+window.addEventListener("online", checkDatabase);
