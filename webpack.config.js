@@ -1,16 +1,16 @@
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const config = {
-	entry: "./public/assets/js/app.js",
+	entry: "./public/index.js",
 	output: {
-		path: __dirname + "/public/dist",
+		path: __dirname + "/dist",
 		filename: "bundle.js"
 	},
 	mode: "production",
 	plugins: [
 		new WebpackPwaManifest({
 			// the name of the generated manifest file
-			filename: "manifest.json",
+			filename: "manifest.webmanifest",
 			inject: false,
 			fingerprints: false,
 			name: "Images App",
