@@ -1,7 +1,7 @@
 const WebpackPwaManifest = require("webpack-pwa-manifest");
 const path = require("path");
 const config = {
-	entry: "./public/index.js",
+	entry: "/public/index.js",
 	output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
@@ -13,8 +13,8 @@ const config = {
 			filename: "manifest.webmanifest",
 			inject: false,
 			fingerprints: false,
-			name: "Images App",
-			short_name: "Images App",
+			name: "Budget App",
+			short_name: "Budget App",
 			theme_color: "#ffffff",
 			background_color: "#ffffff",
 			start_url: "/",
@@ -23,7 +23,7 @@ const config = {
 				{
 					src: path.resolve(
 						__dirname,
-						"public/assets/images/icons/icon-512x512.png"
+						"/icons/icon-512x512.png"
 					),
 					size: [72, 96, 128, 144, 152, 192, 384, 512]
 				}
