@@ -1,3 +1,5 @@
+const CACHE_NAME = "code-cache-v1";
+const DATA_CACHE_NAME = "budget-cache";
 const FILES_TO_CACHE = [
 	"/",
 	"/icons/icon-192x192.png",
@@ -8,9 +10,6 @@ const FILES_TO_CACHE = [
 	"/manifest.webmanifest",
 	"/styles.css",
 ];
-
-const CACHE_NAME = "code-cache-v1";
-const DATA_CACHE_NAME = "budget-cache";
 
 //install
 self.addEventListener("install", function (evt) {
