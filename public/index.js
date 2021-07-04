@@ -8,6 +8,7 @@ if('serviceWorker' in navigator) {
   
 };
 
+
 let transactions = [];
 let myChart;
 
